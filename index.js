@@ -1,4 +1,3 @@
-
 /**
  * expose `data`
  */
@@ -182,5 +181,6 @@ function del (key) {
  */
 
 function attr (el, k) {
-  return el.getAttribute('data-' + k);
+  if(el.getAttribute)
+    return el.getAttribute('data-' + k);
 }
